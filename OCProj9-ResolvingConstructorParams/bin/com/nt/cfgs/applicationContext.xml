@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Spring bean configuration -->
+
+	<!-- <bean id="mk" class="com.nt.beans.Marks"> <constructor-arg value="70"></constructor-arg> 
+		<constructor-arg value="80"></constructor-arg> <constructor-arg value="90"></constructor-arg> 
+		</bean> -->
+
+	<!-- If we want to get the same output but we don't want to write the values 
+		in order then we can give index id Example : -->
+
+	<!-- <bean id="mk" class="com.nt.beans.Marks"> <constructor-arg index="1" 
+		value="80"></constructor-arg> <constructor-arg index="2" value="90"></constructor-arg> 
+		<constructor-arg index="0" value="70"></constructor-arg> </bean> -->
+
+	<!-- And even if we miss any one index it will be assigned automatically 
+		-Example : -->
+	<!-- <bean id="mk" class="com.nt.beans.Marks"> <constructor-arg index="1" 
+		value="80"></constructor-arg> <constructor-arg index="2" value="90"></constructor-arg> 
+		<constructor-arg value="70"></constructor-arg> </bean> -->
+
+	<!-- If we miss more than one index it will follow the order we've written 
+		except the mentioned index Example : -->
+
+	<bean id="mk" class="com.nt.beans.Marks">
+		<constructor-arg index="1" value="80"></constructor-arg>
+		<constructor-arg value="90"></constructor-arg>
+		<constructor-arg value="70"></constructor-arg>
+	</bean>
+</beans>

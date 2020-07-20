@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!-- Configure Spring Bean -->
+	<bean id="stud" class="com.nt.comp.Student">
+
+		<!-- Constructor Injection (All value should be defined else error will 
+			come) -->
+
+		<!-- <constructor-arg value="1001" /> <constructor-arg value="Manish" /> 
+			<constructor-arg value="KOAA" /> <constructor-arg value="97.56f" /> -->
+
+		<!-- Setter Injection (We can leave defining value :- Default value 0 or 
+			0.0 will come and In case of String null will be default value) -->
+
+		<property name="sno" value="1001"></property>
+		<property name="sname" value="Manish"></property>
+		<property name="sadd" value="KOAA"></property>
+		<property name="avg" value="95.69f"></property>
+	</bean>
+</beans>
